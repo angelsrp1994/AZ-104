@@ -1,7 +1,7 @@
 {
     "properties": {
-        "roleName": "Virtual Machine Operator",
-        "description": "Can monitor and restart virtual machines.",
+        "roleName": "Usuario de VMs",
+        "description": "Usuario de VMs",
         "assignableScopes": [
             "/subscriptions/889acb0d-fa12-49bf-acff-421925e12f72"
         ],
@@ -20,9 +20,9 @@
                     "Microsoft.Insights/diagnosticSettings/*",
                     "Microsoft.Support/*"
                 ],
-                "notActions": [],
-                "dataActions": [],
-                "notDataActions": []
+            "notActions": [],
+            "dataActions": [],
+            "notDataActions": []
             }
         ]
     }
