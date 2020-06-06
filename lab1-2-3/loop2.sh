@@ -1,8 +1,8 @@
-numero2=1
-while [ $numero2 -le 10 ]
+numero=1
+while [ $numero -le 10 ]
 do
 az group delete \
---name aramosgroup$numero2 \
+--name aramosgroup$numero \
 -y
-((numero2++))
+((numero++))
 done
