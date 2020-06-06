@@ -1,0 +1,29 @@
+{
+    "properties": {
+        "roleName": "Virtual Machine Operator",
+        "description": "Can monitor and restart virtual machines.",
+        "assignableScopes": [
+            "/subscriptions/889acb0d-fa12-49bf-acff-421925e12f72"
+        ],
+        "permissions": [
+            {
+                "actions": [
+                    "Microsoft.Storage/*/read",
+                    "Microsoft.Network/*/read",
+                    "Microsoft.Compute/*/read",
+                    "Microsoft.Compute/virtualMachines/start/action",
+                    "Microsoft.Compute/virtualMachines/restart/action",
+                    "Microsoft.Authorization/*/read",
+                    "Microsoft.ResourceHealth/availabilityStatuses/read",
+                    "Microsoft.Resources/subscriptions/resourceGroups/read",
+                    "Microsoft.Insights/alertRules/*",
+                    "Microsoft.Insights/diagnosticSettings/*",
+                    "Microsoft.Support/*"
+                ],
+                "notActions": [],
+                "dataActions": [],
+                "notDataActions": []
+            }
+        ]
+    }
+}
