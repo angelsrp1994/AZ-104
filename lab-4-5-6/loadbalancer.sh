@@ -1,7 +1,7 @@
 group=load-balancer-intro
 az group create -g $group -l eastus
 username=adminuser
-password='SecretPassword123!@#'
+password='NuevaClave123!@#'
 
 az network vnet create \
   -n vm-vnet \
