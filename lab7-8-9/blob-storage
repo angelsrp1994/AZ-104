@@ -25,10 +25,10 @@ New-AzStorageContainer -Name $containerName -Context $ctx -Permission blob
 
 Set-AzStorageBlobContent -File "ejemplo1.txt" `
   -Container $containerName `
-  -Blob "Image001.jpg" `
+  -Blob "ejemplo1.txt" `
   -Context $ctx 
 
 Set-AzStorageBlobContent -File "ejemplo2.txt" `
   -Container $containerName `
-  -Blob "Image002.png" `
+  -Blob "ejemplo2.txt" `
   -Context $ctx
