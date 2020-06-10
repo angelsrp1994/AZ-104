@@ -6,7 +6,7 @@ $resourceGroup = "blob-storage"
 #Creamos storage acc y reservamos el contexto:
 
 $storageAccount = New-AzStorageAccount -ResourceGroupName $resourceGroup `
-  -Name "mystorageaccount" `
+  -Name "aramosblob" `
   -SkuName Standard_LRS `
   -Location $location `
 
