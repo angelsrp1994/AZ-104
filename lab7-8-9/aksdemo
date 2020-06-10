@@ -1,0 +1,29 @@
+#Crear un grupo de recursos para AKS
+
+az group create --name aks-group --location eastus
+
+#Crear un cluster AKS
+
+az aks create --resource-group aks-group --name aks-cluster --node-count 1 --enable-addons monitoring --generate-ssh-keys
+
+#Opcional, para controlar el cluster se utiliza kubectl
+#Puede instalarlo con el siguiente comando:
+
+az aks install-cli
+
+#Nos conectaremos al cluster, para realizar ello tenemos que obtener las credenciales y colocarlas localmente
+
+az aks get-credentials --resource-group aks-group --name aks-cluster
+
+#Verificamos la conexion:
+
+kubectl get nodes
+
+#Aplicamos el formato yaml de la configuracion del cluster (Pagina web de votacion)
+
+kubectl apply -f azure-vote.yaml
+
+#Verificamos el servicio:
+
+kubectl get service azure-vote-front --watch
+
