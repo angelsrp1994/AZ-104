@@ -3,6 +3,10 @@
 $location = "eastus"
 $resourceGroup = "blob-storage"
 
+#Creamos grupo de recursos
+
+New-AzResourceGroup -Name $resourceGroup -Location $location
+
 #Creamos storage acc y reservamos el contexto:
 
 $storageAccount = New-AzStorageAccount -ResourceGroupName $resourceGroup `
