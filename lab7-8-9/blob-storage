@@ -1,0 +1,30 @@
+#Creamos variables de rg y location:
+
+$location = "eastus"
+$resourceGroup = "blob-storage"
+
+#Creamos storage acc y reservamos el contexto:
+
+$storageAccount = New-AzStorageAccount -ResourceGroupName $resourceGroup `
+  -Name "mystorageaccount" `
+  -SkuName Standard_LRS `
+  -Location $location `
+
+$ctx = $storageAccount.Context
+
+#Creamos un container
+
+$containerName = "ejemplocontainer"
+New-AzStorageContainer -Name $containerName -Context $ctx -Permission blob
+
+#Cargamos archivos:
+
+Set-AzStorageBlobContent -File "ejemplo1.txt" `
+  -Container $containerName `
+  -Blob "Image001.jpg" `
+  -Context $ctx 
+
+Set-AzStorageBlobContent -File "ejemplo2.txt" `
+  -Container $containerName `
+  -Blob "Image002.png" `
+  -Context $ctx
